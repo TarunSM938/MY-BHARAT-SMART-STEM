@@ -74,14 +74,13 @@ export default function WhyChooseUs() {
           {reasons.map((reason) => (
             <div key={reason.number} className="flex gap-6 items-start">
 
-              {/* Image-clipped Number — fixed width so both digits show fully */}
               <div
                 className="shrink-0 select-none"
                 style={{
                   fontSize: "6rem",
                   fontWeight: 900,
                   lineHeight: 1,
-                  width: "8rem",          /* wide enough for two digits */
+                  width: "8rem",          
                   whiteSpace: "nowrap",
                   backgroundImage: `url(${reason.image})`,
                   backgroundSize: "cover",

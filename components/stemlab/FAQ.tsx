@@ -182,7 +182,6 @@ export default function FAQ() {
                   <span>{faq.question}</span>
 
                   {isOpen ? (
-                    /* × close mark when open */
                     <span
                       style={{
                         flexShrink: 0,
@@ -200,7 +199,6 @@ export default function FAQ() {
                       ×
                     </span>
                   ) : (
-                    /* chevron-down circle when closed */
                     <span
                       style={{
                         flexShrink: 0,

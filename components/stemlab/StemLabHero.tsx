@@ -2,13 +2,6 @@ import Image from "next/image";
 
 export default function StemLabHero() {
   return (
-    /*
-     * margin-top: negative value pulls this section UP behind the navbar.
-     * padding-top: pushes the content DOWN so it appears below the navbar.
-     * The navbar outer wrapper is ~126px tall (py-9 = 36px top + 36px bottom + 90px pill = ~162px).
-     * We use margin-top: -162px and padding-top: 162px so content stays in place
-     * but the background extends behind the navbar.
-     */
     <section
       className="relative w-full overflow-hidden"
       style={{
@@ -16,9 +9,7 @@ export default function StemLabHero() {
         marginTop: "-162px",
         paddingTop: "162px",
       }}
-    >
-      {/* Grid Background — now covers the navbar area too */}
-      <div
+    >      <div
         className="absolute inset-0 z-0 pointer-events-none"
         style={{
           backgroundImage:
@@ -27,7 +18,6 @@ export default function StemLabHero() {
         }}
       />
 
-      {/* Colored blur strips */}
       <div
         className="absolute top-0 left-0 w-full pointer-events-none z-0"
         style={{
@@ -62,9 +52,7 @@ export default function StemLabHero() {
         className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10 mx-auto px-12 py-10"
         style={{ maxWidth: "1344px" }}
       >
-        {/* Left: Text */}
         <div className="flex flex-col items-start gap-8 max-w-xl">
-          {/* Green Badge */}
           <div
             className="flex items-center justify-center px-4 py-1.5"
             style={{
@@ -153,7 +141,6 @@ export default function StemLabHero() {
           </div>
         </div>
 
-        {/* Right: Image + floating labels */}
         <div
           className="relative flex-shrink-0"
           style={{ width: "390px", height: "367px" }}
@@ -178,7 +165,6 @@ export default function StemLabHero() {
             />
           </div>
 
-          {/* Floating label: 4-6 Week Installation */}
           <div
             className="absolute flex items-center justify-center px-4 py-2 z-10"
             style={{
@@ -203,7 +189,6 @@ export default function StemLabHero() {
             </span>
           </div>
 
-          {/* Floating label: Teacher Provided */}
           <div
             className="absolute flex items-center justify-center px-4 py-2 z-10"
             style={{
@@ -228,7 +213,6 @@ export default function StemLabHero() {
             </span>
           </div>
 
-          {/* Floating label: Full Support Included */}
           <div
             className="absolute flex items-center justify-center px-4 py-2 z-10"
             style={{

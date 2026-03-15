@@ -151,10 +151,8 @@ export default function Packages() {
               </div>
             )}
 
-            {/* Top spacing for non-popular */}
             {!pkg.popular && <div style={{ height: "20px" }} />}
 
-            {/* Name + subtitle */}
             <div className="flex flex-col gap-2 mb-2">
               <span
                 style={{

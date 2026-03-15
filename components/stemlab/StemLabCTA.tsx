@@ -71,7 +71,6 @@ export default function StemLabCTA() {
             marginBottom: "20px",
           }}
         >
-          {/* Primary — orange filled */}
           <button
             style={{
               background: "#F6841F",
@@ -97,7 +96,6 @@ export default function StemLabCTA() {
             Get a Lab Proposal
           </button>
 
-          {/* Secondary — white outlined */}
           <button
             style={{
               background: "#FFFFFF",

@@ -17,11 +17,7 @@ export default function Navbar() {
   ];
 
   return (
-    /*
-     * Outer wrapper: transparent background so page/hero background shows through.
-     * position: relative + z-index: 10 so it sits ON TOP of the hero section
-     * which uses marginTop: -162px to slide behind this navbar.
-     */
+  
     <div
       className="w-full px-12 py-9"
       style={{ background: "transparent", position: "relative", zIndex: 10 }}
@@ -41,7 +37,7 @@ export default function Navbar() {
         <Link href="/">
           <div
             className="relative"
-            style={{ width: "66px", height: "50px", mixBlendMode: "multiply" }}
+            style={{ width: "100px", height: "100px", mixBlendMode: "multiply" }}
           >
             <Image
               src="/logo.png"

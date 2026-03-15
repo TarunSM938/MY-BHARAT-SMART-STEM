@@ -13,7 +13,6 @@ export default function TransformSchool() {
       <section className="bg-white py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="mb-10">
-            {/* Row 1: tag left, subtitle right */}
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-2 text-xs text-gray-500 font-medium">
                 <span>Practical Learning • Real Skills • Future Ready</span>
@@ -25,7 +24,6 @@ export default function TransformSchool() {
                 Practical Learning for the Next Generation
               </p>
             </div>
-            {/* Row 2: big heading left only */}
             <h2 className="text-2xl md:text-3xl font-black text-[#1A1A1A] leading-tight max-w-lg">
               Transform Your School as AI-Drone-Robotics School
             </h2>
@@ -69,9 +67,7 @@ export default function TransformSchool() {
 
         <div className="relative z-10 flex flex-col items-center">
 
-          {/* Heading row with mascot floating top-left of the "B" */}
           <div className="relative mb-5 flex justify-center">
-            {/* Mascot: more tilted, floating above-left, not overlapping text */}
             <div
               className="absolute"
               style={{
@@ -93,7 +89,6 @@ export default function TransformSchool() {
               />
             </div>
 
-            {/* Heading — slightly smaller so it fits one line with clear gap from mascot */}
             <h2
               className="font-black text-[#1A1A1A] leading-tight text-center"
               style={{ fontSize: "clamp(1.2rem, 2.6vw, 2.1rem)", whiteSpace: "nowrap", paddingLeft: "32px" }}
@@ -110,7 +105,6 @@ export default function TransformSchool() {
             <button className="bg-[#E8834A] text-white px-8 py-3 rounded-lg font-semibold text-sm hover:bg-[#d4743b] transition-colors shadow-sm">
               Schedule free demo
             </button>
-            {/* Transparent / outline button */}
             <button className="border-2 border-gray-700 text-gray-800 bg-transparent px-8 py-3 rounded-lg font-semibold text-sm hover:bg-white/40 transition-colors">
               Download brochure
             </button>
@@ -118,7 +112,6 @@ export default function TransformSchool() {
 
           {/* Call Us */}
           <div className="flex items-center justify-center gap-2">
-            {/* Orange phone SVG icon */}
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#E8834A" className="w-4 h-4 shrink-0">
               <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.47 11.47 0 0 0 3.59.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.59a1 1 0 0 1-.25 1.01z" />
             </svg>

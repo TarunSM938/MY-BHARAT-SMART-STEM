@@ -1,4 +1,3 @@
-// SVG dot components extracted from uploaded files
 const OrangeDot = () => (
   <svg width="58" height="61" viewBox="0 0 58 61" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g filter="url(#od)">
@@ -139,12 +138,10 @@ function StepCard({ step }: { step: typeof steps[0] }) {
         boxSizing: "border-box",
       }}
     >
-      {/* SVG Dot pin */}
       <div style={{ flexShrink: 0 }}>
         {step.dot}
       </div>
 
-      {/* Inner colored box */}
       <div
         style={{
           background: step.bg,
@@ -195,7 +192,6 @@ export default function ImplementationProcess() {
         {/* Canvas */}
         <div style={{ position: "relative", width: "1163px", height: "1500px" }}>
 
-          {/* SVG lines BEHIND cards */}
           <svg
             viewBox="0 0 1163 1500"
             xmlns="http://www.w3.org/2000/svg"
@@ -214,7 +210,6 @@ export default function ImplementationProcess() {
             ))}
           </svg>
 
-          {/* Cards ON TOP */}
           <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 1 }}>
             {steps.map((step) => (
               <StepCard key={step.number} step={step} />

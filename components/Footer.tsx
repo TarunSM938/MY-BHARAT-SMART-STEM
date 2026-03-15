@@ -135,7 +135,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info — inline SVGs, no image files */}
+          {/* Contact Info */}
           <div>
             <h4 className="text-white font-bold mb-5 text-sm tracking-wide uppercase">Contact Info</h4>
             <ul className="space-y-5 text-gray-400 text-sm">
