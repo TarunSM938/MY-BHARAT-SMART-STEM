@@ -17,8 +17,16 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="w-full px-12 py-9">
-      {/* Navbar pill container */}
+    /*
+     * Outer wrapper: transparent background so page/hero background shows through.
+     * position: relative + z-index: 10 so it sits ON TOP of the hero section
+     * which uses marginTop: -162px to slide behind this navbar.
+     */
+    <div
+      className="w-full px-12 py-9"
+      style={{ background: "transparent", position: "relative", zIndex: 10 }}
+    >
+      {/* Navbar pill */}
       <div
         className="flex flex-row justify-between items-center px-8 py-3 mx-auto"
         style={{
@@ -62,7 +70,6 @@ export default function Navbar() {
             </Link>
           ))}
 
-          {/* Contact Us Button */}
           <Link href="/contact">
             <button
               className="text-white text-base font-bold uppercase transition-opacity hover:opacity-90"

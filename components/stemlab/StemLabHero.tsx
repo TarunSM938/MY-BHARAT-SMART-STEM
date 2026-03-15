@@ -2,11 +2,22 @@ import Image from "next/image";
 
 export default function StemLabHero() {
   return (
+    /*
+     * margin-top: negative value pulls this section UP behind the navbar.
+     * padding-top: pushes the content DOWN so it appears below the navbar.
+     * The navbar outer wrapper is ~126px tall (py-9 = 36px top + 36px bottom + 90px pill = ~162px).
+     * We use margin-top: -162px and padding-top: 162px so content stays in place
+     * but the background extends behind the navbar.
+     */
     <section
       className="relative w-full overflow-hidden"
-      style={{ background: "#FFFFFF" }}
+      style={{
+        background: "#FFFFFF",
+        marginTop: "-162px",
+        paddingTop: "162px",
+      }}
     >
-      {/* Grid Background */}
+      {/* Grid Background — now covers the navbar area too */}
       <div
         className="absolute inset-0 z-0 pointer-events-none"
         style={{
@@ -143,7 +154,10 @@ export default function StemLabHero() {
         </div>
 
         {/* Right: Image + floating labels */}
-        <div className="relative flex-shrink-0" style={{ width: "390px", height: "367px" }}>
+        <div
+          className="relative flex-shrink-0"
+          style={{ width: "390px", height: "367px" }}
+        >
           {/* Main Image */}
           <div
             className="absolute overflow-hidden"

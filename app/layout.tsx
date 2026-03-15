@@ -26,7 +26,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${poppins.variable}`}>
+      <body
+        className={`${inter.variable} ${poppins.variable}`}
+        style={{ background: "#ffffff", margin: 0, padding: 0 }}
+      >
         <Navbar />
         {children}
       </body>
