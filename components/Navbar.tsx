@@ -17,66 +17,68 @@ export default function Navbar() {
   ];
 
   return (
-  
     <div
       className="w-full px-12 py-9"
       style={{ background: "transparent", position: "relative", zIndex: 10 }}
     >
       {/* Navbar pill */}
       <div
-        className="flex flex-row justify-between items-center px-8 py-3 mx-auto"
+        className="flex flex-row justify-between items-center px-8 py-3 mx-auto overflow-hidden"
         style={{
-          background: "#FFFEFB",
-          border: "1px solid #2C2B2B",
+          background: "#FFFFFF",
+          border: "1px solid #27272A",
           borderRadius: "20px",
           maxWidth: "1344px",
-          height: "90px",
+          height: "96px",
         }}
       >
         {/* Logo */}
         <Link href="/">
-          <div
-            className="relative"
-            style={{ width: "100px", height: "100px", mixBlendMode: "multiply" }}
-          >
-            <Image
-              src="/logo.png"
-              alt="Bharat Smart STEM"
-              fill
-              className="object-contain"
-            />
+          <div style={{ width: "86px", height: "70px", position: "relative", mixBlendMode: "multiply" }}>
+            <Image src="/logo.png" alt="Bharat Smart STEM" fill className="object-contain" />
           </div>
         </Link>
 
-        {/* Desktop Nav Links */}
-        <div className="hidden md:flex flex-row items-center gap-12">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-base uppercase transition-colors"
-              style={{
-                fontFamily: "Inter, sans-serif",
-                fontWeight: pathname === link.href ? 600 : 300,
-                color: "#2C2B2B",
-                textDecoration: "none",
-              }}
-            >
-              {link.label}
-            </Link>
-          ))}
+        {/* Desktop Nav */}
+        <div className="hidden md:flex flex-row items-center" style={{ gap: "48px" }}>
+          {links.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="py-2.5 flex justify-center items-center"
+                style={{
+                  fontFamily: "Inter, sans-serif",
+                  fontWeight: isActive ? 600 : 300,
+                  fontSize: "16px",
+                  color: "#27272A",
+                  textTransform: "uppercase",
+                  textDecoration: "none",
+                }}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
 
           <Link href="/contact">
             <button
-              className="text-white text-base font-bold uppercase transition-opacity hover:opacity-90"
               style={{
-                background: "#F6841F",
-                borderRadius: "8px",
-                padding: "10px 28px",
                 fontFamily: "Inter, sans-serif",
                 fontWeight: 700,
-                border: "none",
+                fontSize: "16px",
+                color: "#FFFFFF",
+                background: "#F97316",
+                borderRadius: "8px",
+                height: "40px",
+                padding: "16px 28px",
+                border: "1px solid transparent",
                 cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                whiteSpace: "nowrap",
               }}
             >
               Contact Us
@@ -84,69 +86,55 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Hamburger */}
+        {/* Mobile hamburger */}
         <button
           className="md:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
-          <span
-            className="block w-6 h-0.5 transition-all"
-            style={{
-              background: "#2C2B2B",
-              transform: menuOpen ? "rotate(45deg) translateY(8px)" : "none",
-            }}
-          />
-          <span
-            className="block w-6 h-0.5 transition-all"
-            style={{
-              background: "#2C2B2B",
-              opacity: menuOpen ? 0 : 1,
-            }}
-          />
-          <span
-            className="block w-6 h-0.5 transition-all"
-            style={{
-              background: "#2C2B2B",
-              transform: menuOpen ? "rotate(-45deg) translateY(-8px)" : "none",
-            }}
-          />
+          <span className="block w-6 h-0.5 transition-all" style={{ background: "#27272A", transform: menuOpen ? "rotate(45deg) translateY(8px)" : "none" }} />
+          <span className="block w-6 h-0.5 transition-all" style={{ background: "#27272A", opacity: menuOpen ? 0 : 1 }} />
+          <span className="block w-6 h-0.5 transition-all" style={{ background: "#27272A", transform: menuOpen ? "rotate(-45deg) translateY(-8px)" : "none" }} />
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile menu */}
       {menuOpen && (
         <div
           className="md:hidden mt-2 px-6 py-4 flex flex-col gap-4"
-          style={{
-            background: "#FFFEFB",
-            border: "1px solid #2C2B2B",
-            borderRadius: "16px",
-          }}
+          style={{ background: "#FFFFFF", border: "1px solid #27272A", borderRadius: "16px" }}
         >
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMenuOpen(false)}
-              className="text-base uppercase"
-              style={{
-                fontFamily: "Inter, sans-serif",
-                fontWeight: pathname === link.href ? 600 : 400,
-                color: "#2C2B2B",
-              }}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {links.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                style={{
+                  fontFamily: "Inter, sans-serif",
+                  fontWeight: isActive ? 600 : 300,
+                  fontSize: "16px",
+                  color: "#27272A",
+                  textTransform: "uppercase",
+                  textDecoration: "none",
+                }}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
           <Link href="/contact" onClick={() => setMenuOpen(false)}>
             <button
-              className="w-full text-white text-base font-bold uppercase"
               style={{
-                background: "#F6841F",
+                width: "100%",
+                fontFamily: "Inter, sans-serif",
+                fontWeight: 700,
+                fontSize: "16px",
+                color: "#FFFFFF",
+                background: "#F97316",
                 borderRadius: "8px",
                 padding: "10px 28px",
-                fontFamily: "Inter, sans-serif",
                 border: "none",
                 cursor: "pointer",
               }}

@@ -1,121 +1,61 @@
-const OrangeDot = () => (
-  <svg width="58" height="61" viewBox="0 0 58 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g filter="url(#od)">
-      <circle cx="29.0027" cy="27.944" r="25" transform="rotate(7.22072 29.0027 27.944)" fill="#D9D9D9" fillOpacity="0.3"/>
-      <circle cx="29.0656" cy="27.4481" r="12.5" transform="rotate(7.22072 29.0656 27.4481)" fill="#F6841F"/>
-    </g>
-    <defs>
-      <filter id="od" x="0" y="2.941" width="58.005" height="58.005" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-        <feOffset dy="4"/><feGaussianBlur stdDeviation="2"/>
-        <feComposite in2="hardAlpha" operator="out"/>
-        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-      </filter>
-    </defs>
-  </svg>
-);
-
-const BlueDot = () => (
-  <svg width="58" height="62" viewBox="0 0 58 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g filter="url(#bd)">
-      <circle cx="29.0031" cy="28.1383" r="25" transform="rotate(-7.73773 29.0031 28.1383)" fill="#D9D9D9" fillOpacity="0.3"/>
-      <circle cx="28.9359" cy="27.6429" r="12.5" transform="rotate(-7.73773 28.9359 27.6429)" fill="#196FAC"/>
-    </g>
-    <defs>
-      <filter id="bd" x="0" y="3.135" width="58.006" height="58.006" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-        <feOffset dy="4"/><feGaussianBlur stdDeviation="2"/>
-        <feComposite in2="hardAlpha" operator="out"/>
-        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-      </filter>
-    </defs>
-  </svg>
-);
-
-const GreenDot = () => (
-  <svg width="58" height="61" viewBox="0 0 58 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g filter="url(#gd)">
-      <circle cx="29.0028" cy="27.9438" r="25" transform="rotate(7.22 29.0028 27.9438)" fill="#D9D9D9" fillOpacity="0.3"/>
-      <circle cx="29.0657" cy="27.4477" r="12.5" transform="rotate(7.22 29.0657 27.4477)" fill="#169A4C"/>
-    </g>
-    <defs>
-      <filter id="gd" x="0" y="2.941" width="58.005" height="58.005" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-        <feOffset dy="4"/><feGaussianBlur stdDeviation="2"/>
-        <feComposite in2="hardAlpha" operator="out"/>
-        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-      </filter>
-    </defs>
-  </svg>
-);
-
 const steps = [
   {
     number: "01",
     title: "Free Consultation & Needs Assessment",
     description: "We visit your school, understand your goals, check space, and suggest the best STEM lab plan. No cost. No obligation.",
-    bg: "rgba(246, 132, 31, 0.15)",
-    dot: <OrangeDot />,
-    rotate: "8.78deg",
+    dot: "#F6841F",
+    bg: "rgba(246, 132, 31, 0.2)",
+    left: 48.77,
     top: 0,
-    left: 0,
+    rotate: "7.22deg",
   },
   {
     number: "02",
     title: "Customised Proposal & Planning",
     description: "You receive a complete plan with lab design, equipment list, curriculum, timeline, and pricing. Clear. Transparent. Tailored.",
-    bg: "rgba(25, 111, 172, 0.15)",
-    dot: <BlueDot />,
-    rotate: "-11.26deg",
-    top: 179,
+    dot: "#196FAC",
+    bg: "rgba(25, 111, 172, 0.2)",
     left: 723,
+    top: 233.53,
+    rotate: "-7.74deg",
   },
   {
     number: "03",
     title: "Lab Setup & Installation (Weeks 3–6)",
     description: "We handle full lab setup — furniture, kits, software, safety, and testing. Ready-to-use STEM lab in a few weeks.",
-    bg: "rgba(22, 154, 76, 0.15)",
-    dot: <GreenDot />,
-    rotate: "7.78deg",
-    top: 525,
-    left: 6,
+    dot: "#169A4C",
+    bg: "rgba(22, 154, 76, 0.2)",
+    left: 57.12,
+    top: 525.16,
+    rotate: "7.22deg",
   },
   {
     number: "04",
     title: "Trained STEM Teacher Provided by Us",
     description: "We provide our own trained STEM teacher for your school. No hiring. No training. No extra workload for your staff.",
-    bg: "rgba(246, 132, 31, 0.15)",
-    dot: <OrangeDot />,
-    rotate: "-11.26deg",
-    top: 727,
-    left: 669,
+    dot: "#F6841F",
+    bg: "rgba(246, 132, 31, 0.2)",
+    left: 668.5,
+    top: 781.12,
+    rotate: "-7.74deg",
   },
   {
     number: "05",
     title: "Launch & Ongoing Support (Week 8+)",
     description: "We help you launch the lab and provide continuous support, updates, and assistance whenever needed.",
+    dot: "#196FAC",
     bg: "#DDEAF3",
-    dot: <BlueDot />,
-    rotate: "6.78deg",
-    top: 1045,
-    left: 6,
+    left: 57.12,
+    top: 1045.16,
+    rotate: "7.22deg",
   },
 ];
 
 const lines = [
-  { x1: 202, y1: 200, x2: 925, y2: 382 },
-  { x1: 925, y1: 382, x2: 208, y2: 728 },
-  { x1: 208, y1: 728, x2: 871, y2: 930 },
-  { x1: 871, y1: 930, x2: 208, y2: 1248 },
+  { width: 747.31, left: 183, top: 220, rotate: "17.68deg" },
+  { width: 725.29, left: 231, top: 668, rotate: "30.49deg" },
+  { width: 681.98, left: 253, top: 876, rotate: "-38.98deg" },
+  { width: 725.29, left: 299.44, top: 1324.64, rotate: "-34.35deg" },
 ];
 
 function StepCard({ step }: { step: typeof steps[0] }) {
@@ -123,42 +63,127 @@ function StepCard({ step }: { step: typeof steps[0] }) {
     <div
       style={{
         position: "absolute",
-        top: step.top,
         left: step.left,
-        width: 405,
-        borderRadius: "20px",
-        background: "#FFFFFF",
-        boxShadow: "0px 4px 4px rgba(0,0,0,0.25)",
+        top: step.top,
+        width: "384px",
         transform: `rotate(${step.rotate})`,
-        padding: "10px 15px",
-        display: "flex",
+        background: "#FFFFFF",
+        borderRadius: "20px",
+        boxShadow: "0px 4px 4px rgba(0,0,0,0.25)",
+        display: "inline-flex",
         flexDirection: "column",
+        justifyContent: "flex-end",
         alignItems: "center",
         gap: "10px",
+        padding: "14px 14px 10px",
         boxSizing: "border-box",
       }}
     >
-      <div style={{ flexShrink: 0 }}>
-        {step.dot}
-      </div>
-
+      {/* Outer dot ring */}
       <div
         style={{
-          background: step.bg,
-          borderRadius: "20px",
-          padding: "12px 16px",
-          width: "100%",
+          width: "56px",
+          height: "56px",
+          borderRadius: "50%",
+          background: "rgba(212,212,212,0.3)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
-        <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 500, fontSize: "53px", lineHeight: "110%", color: "#000", margin: "0 0 8px 0" }}>
-          {step.number}
-        </p>
-        <h3 style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: "24px", lineHeight: "124%", color: "#2C2B2B", margin: "0 0 12px 0" }}>
-          {step.title}
-        </h3>
-        <p style={{ fontFamily: "Inter, sans-serif", fontWeight: 400, fontSize: "15px", lineHeight: "26px", color: "#2C2B2B", opacity: 0.6, margin: 0 }}>
-          {step.description}
-        </p>
+        {/* Inner dot */}
+        <div
+          style={{
+            width: "28px",
+            height: "28px",
+            borderRadius: "50%",
+            background: step.dot,
+          }}
+        />
+      </div>
+
+      {/* Content box */}
+      <div
+        style={{
+          alignSelf: "stretch",
+          background: step.bg,
+          borderRadius: "20px",
+          padding: "10px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "10px",
+        }}
+      >
+        <div
+          style={{
+            display: "inline-flex",
+            alignItems: "flex-start",
+            gap: "24px",
+            alignSelf: "stretch",
+          }}
+        >
+          <div
+            style={{
+              flex: 1,
+              display: "inline-flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              gap: "16px",
+            }}
+          >
+            {/* Step number */}
+            <span
+              style={{
+                fontFamily: "Poppins, sans-serif",
+                fontWeight: 500,
+                fontSize: "48px",
+                lineHeight: "58.3px",
+                color: "#000000",
+              }}
+            >
+              {step.number}
+            </span>
+
+            {/* Title + description */}
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+                gap: "12px",
+                alignSelf: "stretch",
+              }}
+            >
+              <h3
+                style={{
+                  fontFamily: "Poppins, sans-serif",
+                  fontWeight: 600,
+                  fontSize: "30px",
+                  lineHeight: "40px",
+                  color: "#2C2B2B",
+                  margin: 0,
+                  alignSelf: "stretch",
+                }}
+              >
+                {step.title}
+              </h3>
+              <p
+                style={{
+                  fontFamily: "Inter, sans-serif",
+                  fontWeight: 400,
+                  fontSize: "17.5px",
+                  lineHeight: "26px",
+                  color: "#2C2B2B",
+                  opacity: 0.6,
+                  margin: 0,
+                  alignSelf: "stretch",
+                }}
+              >
+                {step.description}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -166,50 +191,114 @@ function StepCard({ step }: { step: typeof steps[0] }) {
 
 export default function ImplementationProcess() {
   return (
-    <section style={{ background: "#FAFAFA", padding: "100px 0 120px" }}>
+    <section style={{ background: "#FAFAFA", padding: "180px 0 204px" }}>
       <div style={{ maxWidth: "1179px", margin: "0 auto", padding: "0 48px" }}>
 
         {/* Header */}
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "80px", gap: "24px", flexWrap: "wrap" }}>
-          <div style={{ display: "flex", flexDirection: "column", gap: "16px", maxWidth: "577px" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-              <span style={{ fontFamily: "Inter, sans-serif", fontWeight: 500, fontSize: "14px", color: "#2C2B2B" }}>
+        <div
+          style={{
+            alignSelf: "stretch",
+            height: "128px",
+            display: "inline-flex",
+            justifyContent: "space-between",
+            alignItems: "flex-start",
+            width: "100%",
+            marginBottom: "121px",
+          }}
+        >
+          {/* Left: tag + heading */}
+          <div
+            style={{
+              width: "577px",
+              display: "inline-flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              gap: "24px",
+            }}
+          >
+            <div style={{ display: "inline-flex", alignItems: "center", height: "20px", alignSelf: "stretch" }}>
+              <span
+                style={{
+                  fontFamily: "'IBM Plex Sans Condensed', sans-serif",
+                  fontWeight: 500,
+                  fontSize: "14px",
+                  lineHeight: "20px",
+                  color: "#27272A",
+                  width: "290px",
+                  textAlign: "center",
+                }}
+              >
                 A simple, structured, and risk-free process.
               </span>
-              <span style={{ display: "inline-block", width: "10px", height: "10px", borderRadius: "50%", background: "#F6841F" }} />
-              <span style={{ display: "inline-block", width: "10px", height: "10px", borderRadius: "50%", background: "#196FAC" }} />
-              <span style={{ display: "inline-block", width: "10px", height: "10px", borderRadius: "50%", background: "#169A4C" }} />
+              <div style={{ display: "flex", alignItems: "center", gap: "3px", marginLeft: "4px" }}>
+                <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#F6841F", display: "inline-block" }} />
+                <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#196FAC", display: "inline-block" }} />
+                <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#169A4C", display: "inline-block" }} />
+              </div>
             </div>
-            <h2 style={{ fontFamily: "Inter, sans-serif", fontWeight: 600, fontSize: "48px", lineHeight: "100%", letterSpacing: "-0.72px", color: "#2C2B2B", margin: 0 }}>
+
+            <h2
+              style={{
+                fontFamily: "Inter, sans-serif",
+                fontWeight: 600,
+                fontSize: "48px",
+                lineHeight: "48px",
+                color: "#2C2B2B",
+                margin: 0,
+                alignSelf: "stretch",
+              }}
+            >
               Implementation process
             </h2>
           </div>
-          <p style={{ fontFamily: "Inter, sans-serif", fontWeight: 400, fontSize: "21px", lineHeight: "150%", color: "#2C2B2B", margin: 0, maxWidth: "422px" }}>
-            From Consultation to Launch in 6–8 Weeks
-          </p>
+
+          {/* Right: subtitle */}
+          <div style={{ display: "inline-flex", flexDirection: "column", alignItems: "flex-start", gap: "24px" }}>
+            <p
+              style={{
+                fontFamily: "Inter, sans-serif",
+                fontWeight: 400,
+                fontSize: "20px",
+                lineHeight: "32px",
+                color: "#2C2B2B",
+                margin: 0,
+                width: "280px",
+                whiteSpace: "nowrap",
+              }}
+            >
+              From Consultation to Launch in 6-8 Weeks
+            </p>
+          </div>
         </div>
 
         {/* Canvas */}
-        <div style={{ position: "relative", width: "1163px", height: "1500px" }}>
+        <div style={{ position: "relative", width: "1163px", height: "1450px" }}>
 
+          {/* Dashed connector lines */}
           <svg
-            viewBox="0 0 1163 1500"
+            viewBox="0 0 1163 1450"
             xmlns="http://www.w3.org/2000/svg"
-            style={{ position: "absolute", top: 0, left: 0, width: "1163px", height: "1500px", zIndex: 0 }}
+            style={{ position: "absolute", top: 0, left: 0, width: "1163px", height: "1450px", zIndex: 0 }}
           >
-            {lines.map((l, i) => (
-              <line
-                key={i}
-                x1={l.x1} y1={l.y1}
-                x2={l.x2} y2={l.y2}
-                stroke="#C7C0C0"
-                strokeWidth="3"
-                strokeDasharray="7 7"
-                strokeLinecap="round"
-              />
-            ))}
+            {lines.map((l, i) => {
+              const rad = (parseFloat(l.rotate) * Math.PI) / 180;
+              const x2 = l.left + l.width * Math.cos(rad);
+              const y2 = l.top + l.width * Math.sin(rad);
+              return (
+                <line
+                  key={i}
+                  x1={l.left} y1={l.top}
+                  x2={x2} y2={y2}
+                  stroke="#C7C0C0"
+                  strokeWidth="3"
+                  strokeDasharray="7 7"
+                  strokeLinecap="round"
+                />
+              );
+            })}
           </svg>
 
+          {/* Step cards */}
           <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 1 }}>
             {steps.map((step) => (
               <StepCard key={step.number} step={step} />

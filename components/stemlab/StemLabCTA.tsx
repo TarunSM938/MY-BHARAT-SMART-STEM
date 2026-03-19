@@ -4,14 +4,48 @@ export default function StemLabCTA() {
   return (
     <section
       style={{
+        width: "100%",
+        height: "384px",
         position: "relative",
         overflow: "hidden",
-        padding: "80px 48px 72px",
-        textAlign: "center",
-        background: "linear-gradient(135deg, #fde8d0 0%, #ddeaf5 100%)",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-start",
+        alignItems: "flex-start",
+        gap: "208px",
+        boxSizing: "border-box",
       }}
     >
-      {/* Grid overlay */}
+      {/* ── Blur strips ── */}
+      <div
+        style={{
+          width: "100%",
+          height: "96px",
+          background: "rgba(246, 132, 31, 0.5)",
+          filter: "blur(127.43px)",
+          flexShrink: 0,
+        }}
+      />
+      <div
+        style={{
+          width: "100%",
+          height: "96px",
+          background: "rgba(25, 111, 172, 0.5)",
+          filter: "blur(127.43px)",
+          flexShrink: 0,
+        }}
+      />
+      <div
+        style={{
+          width: "100%",
+          height: "96px",
+          background: "rgba(22, 154, 76, 0.5)",
+          filter: "blur(127.43px)",
+          flexShrink: 0,
+        }}
+      />
+
+      {/* ── Grid overlay ── */}
       <div
         style={{
           position: "absolute",
@@ -19,148 +53,235 @@ export default function StemLabCTA() {
           zIndex: 0,
           pointerEvents: "none",
           backgroundImage:
-            "linear-gradient(rgba(0,0,0,0.055) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.055) 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
+            "linear-gradient(rgba(0,0,0,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px)",
+          backgroundSize: "48px 48px",
         }}
       />
 
-      {/* Content */}
+      {/* ── Content ── */}
       <div
         style={{
-          position: "relative",
+          position: "absolute",
+          inset: 0,
           zIndex: 1,
-          maxWidth: "600px",
-          margin: "0 auto",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
-        {/* Heading */}
-        <h2
-          style={{
-            fontFamily: "Inter, sans-serif",
-            fontWeight: 700,
-            fontSize: "clamp(22px, 3vw, 32px)",
-            lineHeight: "1.2",
-            color: "#1A1A1A",
-            margin: "0 0 8px 0",
-          }}
-        >
-          Ready to Build Your School&apos;s STEM Legacy?
-        </h2>
-
-        {/* Subtitle */}
-        <p
-          style={{
-            fontFamily: "Inter, sans-serif",
-            fontWeight: 400,
-            fontSize: "15px",
-            color: "#2C2B2B",
-            margin: "0 0 28px 0",
-          }}
-        >
-          Get a Lab Proposal
-        </p>
-
-        {/* Buttons */}
         <div
           style={{
+            width: "984px",
+            height: "288px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            gap: "12px",
-            flexWrap: "wrap",
-            marginBottom: "20px",
           }}
         >
-          <button
+          <div
             style={{
-              background: "#F6841F",
-              color: "#FFFFFF",
-              border: "none",
-              padding: "14px 28px",
-              borderRadius: "8px",
-              fontFamily: "Inter, sans-serif",
-              fontSize: "13px",
-              fontWeight: 700,
-              cursor: "pointer",
-              letterSpacing: "0.06em",
-              textTransform: "uppercase",
-              transition: "background 0.2s",
-            }}
-            onMouseEnter={(e) =>
-              ((e.currentTarget as HTMLButtonElement).style.background = "#D4700F")
-            }
-            onMouseLeave={(e) =>
-              ((e.currentTarget as HTMLButtonElement).style.background = "#F6841F")
-            }
-          >
-            Get a Lab Proposal
-          </button>
-
-          <button
-            style={{
-              background: "#FFFFFF",
-              color: "#2C2B2B",
-              border: "1.5px solid #2C2B2B",
-              padding: "13px 28px",
-              borderRadius: "8px",
-              fontFamily: "Inter, sans-serif",
-              fontSize: "13px",
-              fontWeight: 700,
-              cursor: "pointer",
-              letterSpacing: "0.06em",
-              textTransform: "uppercase",
-              transition: "all 0.2s",
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.background = "#2C2B2B";
-              (e.currentTarget as HTMLButtonElement).style.color = "#FFFFFF";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.background = "#FFFFFF";
-              (e.currentTarget as HTMLButtonElement).style.color = "#2C2B2B";
+              width: "888px",
+              display: "inline-flex",
+              flexDirection: "column",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              gap: "32px",
             }}
           >
-            Book a School Visit
-          </button>
-        </div>
-
-        {/* Phone row */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "6px",
-          }}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="#F6841F"
-            width="15"
-            height="15"
-          >
-            <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.47 11.47 0 0 0 3.59.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.59a1 1 0 0 1-.25 1.01z" />
-          </svg>
-          <span
-            style={{
-              fontFamily: "Inter, sans-serif",
-              fontSize: "13px",
-              color: "#2C2B2B",
-            }}
-          >
-            Call Us:{" "}
-            <a
-              href="tel:+919876543210"
+            {/* Top block */}
+            <div
               style={{
-                color: "#2C2B2B",
-                textDecoration: "none",
-                fontWeight: 600,
+                alignSelf: "stretch",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                gap: "32px",
               }}
             >
-              +91 98765 43210
-            </a>
-          </span>
+              {/* Heading + subtitle */}
+              <div
+                style={{
+                  alignSelf: "stretch",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "flex-start",
+                  alignItems: "center",
+                  gap: "8px",
+                }}
+              >
+                <h2
+                  style={{
+                    alignSelf: "stretch",
+                    textAlign: "center",
+                    color: "#27272A",
+                    fontSize: "36px",
+                    fontWeight: 700,
+                    fontFamily: "Poppins, sans-serif",
+                    lineHeight: "40px",
+                    margin: 0,
+                  }}
+                >
+                  Ready to Build Your School&apos;s STEM Legacy?
+                </h2>
+                <p
+                  style={{
+                    alignSelf: "stretch",
+                    textAlign: "center",
+                    color: "#27272A",
+                    fontSize: "20px",
+                    fontWeight: 400,
+                    fontFamily: "Inter, sans-serif",
+                    lineHeight: "28px",
+                    margin: 0,
+                  }}
+                >
+                  Get a Lab Proposal
+                </p>
+              </div>
+
+              {/* Buttons */}
+              <div
+                style={{
+                  display: "inline-flex",
+                  justifyContent: "flex-start",
+                  alignItems: "center",
+                  gap: "16px",
+                }}
+              >
+                <button
+                  style={{
+                    height: "44px",
+                    padding: "16px 28px",
+                    background: "#F97316",
+                    borderRadius: "8px",
+                    border: "none",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    gap: "10px",
+                    cursor: "pointer",
+                    transition: "opacity 0.2s",
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.opacity = "0.9")}
+                  onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
+                >
+                  <span
+                    style={{
+                      color: "#FFFFFF",
+                      fontSize: "16px",
+                      fontWeight: 600,
+                      fontFamily: "Poppins, sans-serif",
+                      textTransform: "uppercase",
+                      lineHeight: "16px",
+                    }}
+                  >
+                    GET A LAB PROPOSAL
+                  </span>
+                </button>
+
+                <button
+                  style={{
+                    padding: "14px 24px",
+                    borderRadius: "8px",
+                    outline: "1px solid #27272A",
+                    outlineOffset: "-1px",
+                    background: "transparent",
+                    border: "none",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    gap: "10px",
+                    cursor: "pointer",
+                    transition: "opacity 0.2s",
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.opacity = "0.7")}
+                  onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
+                >
+                  <span
+                    style={{
+                      color: "#27272A",
+                      fontSize: "16px",
+                      fontWeight: 600,
+                      fontFamily: "Poppins, sans-serif",
+                      textTransform: "uppercase",
+                      lineHeight: "16px",
+                    }}
+                  >
+                    BOOK A SCHOOL VISIT
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            {/* Call Us row */}
+            <div
+              style={{
+                display: "inline-flex",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                gap: "5px",
+              }}
+            >
+              {/* Phone icon */}
+              <div
+                style={{
+                  width: "24px",
+                  height: "24px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <g clipPath="url(#clip_cta_phone)">
+                    <path d="M5.15312 0.769455C4.9125 0.188205 4.27812 -0.12117 3.67188 0.0444546L0.921875 0.794455C0.378125 0.944455 0 1.4382 0 2.0007C0 9.73195 6.26875 16.0007 14 16.0007C14.5625 16.0007 15.0563 15.6226 15.2063 15.0788L15.9563 12.3288C16.1219 11.7226 15.8125 11.0882 15.2312 10.8476L12.2312 9.59758C11.7219 9.38508 11.1313 9.53195 10.7844 9.96008L9.52188 11.5007C7.32188 10.4601 5.54063 8.67883 4.5 6.47883L6.04063 5.21945C6.46875 4.86945 6.61562 4.28195 6.40312 3.77258L5.15312 0.77258V0.769455Z" fill="#F89D4B"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip_cta_phone">
+                      <path d="M0 0H16V16H0V0Z" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+
+              {/* Call text + underline */}
+              <div
+                style={{
+                  width: "192px",
+                  display: "inline-flex",
+                  flexDirection: "column",
+                  justifyContent: "flex-start",
+                  alignItems: "flex-end",
+                  gap: "1px",
+                }}
+              >
+                <span
+                  style={{
+                    alignSelf: "stretch",
+                    textAlign: "center",
+                    color: "#2C2B2B",
+                    fontSize: "16px",
+                    fontWeight: 400,
+                    fontFamily: "Inter, sans-serif",
+                    lineHeight: "24px",
+                    letterSpacing: "-0.5px",
+                  }}
+                >
+                  Call Us: +91 98765 43210
+                </span>
+                {/* Underline */}
+                <div
+                  style={{
+                    width: "120px",
+                    height: "0px",
+                    outline: "1px solid #000000",
+                    outlineOffset: "-0.5px",
+                  }}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

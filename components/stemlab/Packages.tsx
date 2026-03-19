@@ -15,301 +15,370 @@ const packages = [
     id: "basic",
     name: "Basic",
     subtitle: "Starting stem",
-    description:
-      "The most popular choice for established schools ready to go all-in on STEM",
+    description: "The most popular choice for established schools ready to go all-in on STEM",
     price: "₹800",
     popular: false,
     dark: false,
-    buttonStyle: "outline",
-    checkColor: "#F6841F",
-    textColor: "#000000",
-    descColor: "#000000",
-    bg: "#FFFFFF",
-    border: "1px solid #2C2B2B",
+    height: "562px",
   },
   {
     id: "standard",
     name: "Standard",
     subtitle: "STEM Comprehensive",
-    description:
-      "The most popular choice for established schools ready to go all-in on STEM",
+    description: "The most popular choice for established schools ready to go all-in on STEM",
     price: "₹1500",
     popular: true,
     dark: true,
-    buttonStyle: "filled",
-    checkColor: "#169A4C",
-    textColor: "#FFFFFF",
-    descColor: "#FFFFFF",
-    bg: "#2C2B2B",
-    border: "1px solid #F6841F",
+    height: "598px",
   },
   {
     id: "basic2",
     name: "Basic",
     subtitle: "Starting stem",
-    description:
-      "The most popular choice for established schools ready to go all-in on STEM",
+    description: "The most popular choice for established schools ready to go all-in on STEM",
     price: "₹200",
     popular: false,
     dark: false,
-    buttonStyle: "outline",
-    checkColor: "#F6841F",
-    textColor: "#000000",
-    descColor: "#000000",
-    bg: "#FFFFFF",
-    border: "1px solid #2C2B2B",
+    height: "562px",
   },
 ];
+
+function CheckIcon({ dark }: { dark: boolean }) {
+  if (dark) {
+    return (
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ flexShrink: 0 }}>
+        <mask id="mask0_1_2982" style={{ maskType: "luminance" }} maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+          <path d="M7.99992 14.6666C8.87556 14.6677 9.74278 14.4957 10.5518 14.1606C11.3607 13.8255 12.0955 13.3339 12.7139 12.7139C13.3339 12.0955 13.8255 11.3607 14.1606 10.5518C14.4957 9.74278 14.6677 8.87556 14.6666 7.99992C14.6677 7.12429 14.4957 6.25707 14.1606 5.44809C13.8255 4.63911 13.3339 3.90431 12.7139 3.28592C12.0955 2.66598 11.3607 2.17433 10.5518 1.83923C9.74278 1.50413 8.87556 1.33218 7.99992 1.33326C7.12429 1.33218 6.25707 1.50413 5.44809 1.83923C4.63911 2.17433 3.90431 2.66598 3.28592 3.28592C2.66598 3.90431 2.17433 4.63911 1.83923 5.44809C1.50413 6.25707 1.33218 7.12429 1.33326 7.99992C1.33218 8.87556 1.50413 9.74278 1.83923 10.5518C2.17433 11.3607 2.66598 12.0955 3.28592 12.7139C3.90431 13.3339 4.63911 13.8255 5.44809 14.1606C6.25707 14.4957 7.12429 14.6677 7.99992 14.6666Z" fill="white" stroke="white" strokeWidth="2" strokeLinejoin="round"/>
+          <path d="M5.33325 8L7.33325 10L11.3333 6" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </mask>
+        <g mask="url(#mask0_1_2982)">
+          <path d="M0 0H16V16H0V0Z" fill="#169A4C"/>
+        </g>
+      </svg>
+    );
+  }
+  return (
+    <div style={{ position: "relative", width: "20px", height: "20px", flexShrink: 0 }}>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <circle cx="10" cy="10" r="9" stroke="#F6841F" strokeWidth="1.5" />
+        <path d="M6.5 10L9 12.5L13.5 7.5" stroke="#F6841F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </div>
+  );
+}
 
 export default function Packages() {
   return (
     <section
-      className="w-full flex flex-col items-center justify-center"
       style={{
         background: "#F6841F",
-        padding: "80px 133px",
+        padding: "176px 128px",
+        width: "100%",
+        boxSizing: "border-box",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        overflow: "hidden",
       }}
     >
-      {/* Header */}
-      <div className="flex flex-col items-center gap-2 mb-12">
-        <h2
-          className="text-center"
-          style={{
-            fontFamily: "Poppins, sans-serif",
-            fontWeight: 600,
-            fontSize: "40px",
-            lineHeight: "48px",
-            letterSpacing: "-0.003em",
-            color: "#FFFFFF",
-            margin: 0,
-          }}
-        >
-          Choose your package
-        </h2>
-        <p
-          className="text-center"
-          style={{
-            fontFamily: "Inter, sans-serif",
-            fontWeight: 400,
-            fontSize: "24px",
-            lineHeight: "28px",
-            letterSpacing: "-0.5px",
-            color: "#FFFFFF",
-            margin: 0,
-          }}
-        >
-          Three Packages. One Perfect Fit.
-        </p>
-      </div>
-
-      {/* Cards */}
       <div
-        className="flex flex-col md:flex-row items-center justify-center gap-5 w-full"
-        style={{ maxWidth: "1166px" }}
+        style={{
+          maxWidth: "1166px",
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "48px",
+        }}
       >
-        {packages.map((pkg) => (
-          <div
-            key={pkg.id}
-            className="flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"
+        {/* Header */}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "8px",
+            alignSelf: "stretch",
+          }}
+        >
+          <h2
             style={{
-              background: pkg.bg,
-              border: pkg.border,
-              borderRadius: "20px",
-              padding: "0 16px 16px",
-              width: "100%",
-              maxWidth: "376px",
-              minHeight: pkg.popular ? "598px" : "562px",
-              position: "relative",
+              fontFamily: "Poppins, sans-serif",
+              fontWeight: 600,
+              fontSize: "36px",
+              lineHeight: "48px",
+              color: "#FFFFFF",
+              margin: 0,
+              textAlign: "center",
+              alignSelf: "stretch",
             }}
           >
-            {/* Most Popular badge */}
-            {pkg.popular && (
-              <div className="flex justify-center w-full" style={{ marginBottom: "0px" }}>
+            Choose your package
+          </h2>
+          <p
+            style={{
+              fontFamily: "Inter, sans-serif",
+              fontWeight: 400,
+              fontSize: "24px",
+              lineHeight: "28px",
+              color: "#FFFFFF",
+              margin: 0,
+              textAlign: "center",
+              alignSelf: "stretch",
+            }}
+          >
+            Three Packages. One Perfect Fit.
+          </p>
+        </div>
+
+        {/* Cards row */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "20px",
+            alignSelf: "stretch",
+          }}
+        >
+          {packages.map((pkg) => (
+            <div
+              key={pkg.id}
+              style={{
+                flex: 1,
+                height: pkg.height,
+                background: pkg.dark ? "#2C2B2B" : "#FFFFFF",
+                borderRadius: "20px",
+                outline: `1px solid ${pkg.dark ? "#F6841F" : "#27272A"}`,
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                padding: pkg.dark ? "0 16px 24px" : "0 16px 16px",
+                boxSizing: "border-box",
+                flexDirection: "row",
+                transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                cursor: "pointer",
+              }}
+              onMouseEnter={e => {
+                (e.currentTarget as HTMLDivElement).style.transform = "translateY(-10px)";
+                (e.currentTarget as HTMLDivElement).style.boxShadow = pkg.dark
+                  ? "0px 20px 50px rgba(246, 132, 31, 0.4)"
+                  : "0px 20px 50px rgba(0, 0, 0, 0.15)";
+              }}
+              onMouseLeave={e => {
+                (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
+                (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
+              }}
+            >
+              <div
+                style={{
+                  width: "320px",
+                  display: "inline-flex",
+                  flexDirection: "column",
+                  alignItems: "flex-end",
+                  gap: "20px",
+                }}
+              >
+                {/* Most Popular badge */}
+                {pkg.popular && (
+                  <div
+                    style={{
+                      background: "#169A4C",
+                      borderRadius: "8px",
+                      padding: "6px 14px",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontFamily: "Inter, sans-serif",
+                        fontWeight: 600,
+                        fontSize: "16px",
+                        lineHeight: "16px",
+                        color: "#FFFFFF",
+                        textTransform: "uppercase",
+                      }}
+                    >
+                      MOST POPULAR
+                    </span>
+                  </div>
+                )}
+
+                {/* Card body */}
                 <div
-                  className="flex items-center justify-center px-4 py-1.5"
                   style={{
-                    background: "#169A4C",
-                    borderRadius: "8px",
-                    marginTop: "0px",
-                    position: "relative",
-                    top: "-1px",
+                    alignSelf: "stretch",
+                    height: "496px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "16px",
                   }}
                 >
-                  <span
+                  {/* Top section */}
+                  <div
                     style={{
-                      fontFamily: "Inter, sans-serif",
-                      fontWeight: 600,
-                      fontSize: "16px",
-                      letterSpacing: "-0.005em",
-                      color: "#FFFFFF",
-                      textTransform: "uppercase",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      gap: pkg.dark ? "16px" : "20px",
+                      alignSelf: "stretch",
                     }}
                   >
-                    MOST POPULAR
-                  </span>
+                    {/* Name + subtitle + description + price */}
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "12px",
+                        alignSelf: "stretch",
+                      }}
+                    >
+                      <div style={{ display: "flex", flexDirection: "column", gap: "8px", alignSelf: "stretch" }}>
+                        <div style={{ display: "flex", flexDirection: "column", gap: "16px", alignSelf: "stretch" }}>
+                          <div style={{ display: "flex", flexDirection: "column", gap: "8px", alignSelf: "stretch" }}>
+                            {/* Package name */}
+                            <span
+                              style={{
+                                fontFamily: "Poppins, sans-serif",
+                                fontWeight: 700,
+                                fontSize: "36px",
+                                lineHeight: "32px",
+                                color: pkg.dark ? "#FFFFFF" : "#000000",
+                                alignSelf: "stretch",
+                              }}
+                            >
+                              {pkg.name}
+                            </span>
+                            {/* Package subtitle */}
+                            <span
+                              style={{
+                                fontFamily: "Poppins, sans-serif",
+                                fontWeight: 600,
+                                fontSize: "24px",
+                                lineHeight: "20px",
+                                letterSpacing: "-0.015em",
+                                color: pkg.dark ? "#FFFFFF" : "#000000",
+                                alignSelf: "stretch",
+                              }}
+                            >
+                              {pkg.subtitle}
+                            </span>
+                          </div>
+                          {/* Description */}
+                          <p
+                            style={{
+                              fontFamily: "Inter, sans-serif",
+                              fontWeight: 400,
+                              fontSize: "18px",
+                              lineHeight: "28px",
+                              color: pkg.dark ? "#FFFFFF" : "#000000",
+                              opacity: 0.8,
+                              margin: 0,
+                              alignSelf: "stretch",
+                            }}
+                          >
+                            {pkg.description}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Price */}
+                      <span
+                        style={{
+                          fontFamily: "Poppins, sans-serif",
+                          fontWeight: 600,
+                          fontSize: "48px",
+                          lineHeight: "52.8px",
+                          color: pkg.dark ? "#FFFFFF" : "#000000",
+                          alignSelf: "stretch",
+                        }}
+                      >
+                        {pkg.price}
+                      </span>
+                    </div>
+
+                    {/* CTA Button */}
+                    <button
+                      style={{
+                        alignSelf: "stretch",
+                        height: "44px",
+                        padding: "16px 28px",
+                        borderRadius: "8px",
+                        background: pkg.dark ? "#F6841F" : "transparent",
+                        outline: pkg.dark ? "none" : "1px solid #F6841F",
+                        border: "none",
+                        cursor: "pointer",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        gap: "10px",
+                      }}
+                    >
+                      <span
+                        style={{
+                          fontFamily: "Poppins, sans-serif",
+                          fontWeight: 600,
+                          fontSize: "16px",
+                          lineHeight: "16px",
+                          color: pkg.dark ? "#FFFFFF" : "#F6841F",
+                          textTransform: "uppercase",
+                        }}
+                      >
+                        REQUEST A PROPOSAL
+                      </span>
+                    </button>
+                  </div>
+
+                  {/* Divider */}
+                  <div
+                    style={{
+                      alignSelf: "stretch",
+                      height: "1px",
+                      background: pkg.dark ? "rgba(255,255,255,0.25)" : "rgba(0,0,0,0.25)",
+                    }}
+                  />
+
+                  {/* Feature list */}
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: pkg.dark ? "6px" : "4px",
+                      alignSelf: "stretch",
+                    }}
+                  >
+                    {features.map((feature, i) => (
+                      <div
+                        key={i}
+                        style={{
+                          display: "inline-flex",
+                          alignItems: i === 0 ? "center" : "flex-start",
+                          gap: "6px",
+                          alignSelf: "stretch",
+                        }}
+                      >
+                        <CheckIcon dark={pkg.dark} />
+                        <span
+                          style={{
+                            fontFamily: "Inter, sans-serif",
+                            fontWeight: 400,
+                            fontSize: "14px",
+                            lineHeight: i === 0 ? "24px" : "16px",
+                            color: pkg.dark ? "#FFFFFF" : "#000000",
+                            flex: 1,
+                          }}
+                        >
+                          {feature}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            )}
-
-            {!pkg.popular && <div style={{ height: "20px" }} />}
-
-            <div className="flex flex-col gap-2 mb-2">
-              <span
-                style={{
-                  fontFamily: "Poppins, sans-serif",
-                  fontWeight: 700,
-                  fontSize: "36px",
-                  lineHeight: "32px",
-                  color: pkg.textColor,
-                }}
-              >
-                {pkg.name}
-              </span>
-              <span
-                style={{
-                  fontFamily: "Poppins, sans-serif",
-                  fontWeight: 600,
-                  fontSize: "24px",
-                  lineHeight: "20px",
-                  letterSpacing: "0.288px",
-                  color: pkg.textColor,
-                }}
-              >
-                {pkg.subtitle}
-              </span>
             </div>
-
-            {/* Description */}
-            <p
-              style={{
-                fontFamily: "Inter, sans-serif",
-                fontWeight: 400,
-                fontSize: "18px",
-                lineHeight: "28px",
-                color: pkg.descColor,
-                opacity: 0.8,
-                margin: "12px 0",
-              }}
-            >
-              {pkg.description}
-            </p>
-
-            {/* Price */}
-            <p
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                fontWeight: 600,
-                fontSize: "48px",
-                lineHeight: "110%",
-                letterSpacing: "-0.24px",
-                color: pkg.textColor,
-                margin: "8px 0 16px",
-              }}
-            >
-              {pkg.price}
-            </p>
-
-            {/* Button */}
-            <button
-              className="w-full uppercase font-semibold transition-opacity hover:opacity-90"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                fontWeight: 600,
-                fontSize: "16px",
-                lineHeight: "18px",
-                letterSpacing: "-0.24px",
-                height: "46px",
-                borderRadius: "8px",
-                cursor: "pointer",
-                ...(pkg.buttonStyle === "filled"
-                  ? {
-                      background: "#F6841F",
-                      color: "#FFFFFF",
-                      border: "none",
-                    }
-                  : {
-                      background: "transparent",
-                      color: "#F6841F",
-                      border: "1px solid #F6841F",
-                    }),
-              }}
-            >
-              REQUEST A PROPOSAL
-            </button>
-
-            {/* Divider */}
-            <div
-              className="w-full my-4"
-              style={{
-                height: "1px",
-                background: pkg.dark ? "rgba(255,255,255,0.23)" : "rgba(0,0,0,0.23)",
-              }}
-            />
-
-            {/* Feature list */}
-            <div className="flex flex-col gap-1.5">
-              {features.map((feature, i) => (
-                <div key={i} className="flex flex-row items-start gap-2">
-                  {/* Check icon */}
-                  {pkg.dark ? (
-                    
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      style={{ marginTop: "4px", flexShrink: 0 }}
-                    >
-                      <circle cx="8" cy="8" r="8" fill="#169A4C" />
-                      <path
-                        d="M4.5 8L7 10.5L11.5 6"
-                        stroke="#FFFFFF"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  ) : (
-                    
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      style={{ marginTop: "2px", flexShrink: 0 }}
-                    >
-                      <circle
-                        cx="10"
-                        cy="10"
-                        r="9"
-                        stroke="#F6841F"
-                        strokeWidth="1.5"
-                      />
-                      <path
-                        d="M6.5 10L9 12.5L13.5 7.5"
-                        stroke="#F6841F"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  )}
-                  <span
-                    style={{
-                      fontFamily: "Inter, sans-serif",
-                      fontWeight: 400,
-                      fontSize: "14px",
-                      lineHeight: "24px",
-                      color: pkg.dark ? "#FFFFFF" : "#000000",
-                    }}
-                  >
-                    {feature}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
